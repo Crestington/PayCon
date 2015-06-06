@@ -7,6 +7,7 @@
 #include "optionsmodel.h"
 #include "addresstablemodel.h"
 #include "bitcoinunits.h"
+#include "uint256_t.h
 
 #include "wallet.h"
 #include "ui_interface.h"
@@ -549,7 +550,8 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
         case Amount:
             return rec->credit + rec->debit;
 		case Depth:
-			return rec->status.depth;
+			/* return rec->status.depth; */
+553          return (qlonglong)rec->status.depth;
         }
         break;
     case Qt::ToolTipRole:

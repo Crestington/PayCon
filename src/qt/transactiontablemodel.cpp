@@ -7,7 +7,7 @@
 #include "optionsmodel.h"
 #include "addresstablemodel.h"
 #include "bitcoinunits.h"
-#include "uint256_t.h
+#include "uint256_t.h"
 
 #include "wallet.h"
 #include "ui_interface.h"

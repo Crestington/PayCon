@@ -531,7 +531,8 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
         case Amount:
             return formatTxAmount(rec);
 		case Depth:
-			return QString::number(rec->status.depth);
+		/* return rec->status.depth; */
+553          return (qlonglong)rec->status.depth;
         }
         break;
     case Qt::EditRole:
